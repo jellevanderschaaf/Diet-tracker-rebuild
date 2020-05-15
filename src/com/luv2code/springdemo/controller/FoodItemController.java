@@ -33,6 +33,10 @@ public class FoodItemController {
 	@RequestMapping("/showFormNewFoodItem")
 	public String showFormNewFoodItem(Model theModel) {
 		
+		FoodItem theFoodItem = new FoodItem();
+		
+		theModel.addAttribute("foodItem", theFoodItem);
+		
 		return "food-item-form";
 	}
 	
