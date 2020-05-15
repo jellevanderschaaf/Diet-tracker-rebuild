@@ -30,4 +30,12 @@ public class FoodItemServiceImpl implements FoodItemService {
 		foodItemDAO.saveFoodItem(theFoodItem);
 	}
 
+
+	@Override
+	@Transactional
+	public FoodItem getFoodItem(int theId) {
+	
+		return foodItemDAO.getFoodItem(theId);
+	}
+
 }

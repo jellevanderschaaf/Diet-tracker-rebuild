@@ -10,5 +10,7 @@ public interface FoodItemDAO {
 	public List<FoodItem> getFoodItems();
 
 	public void saveFoodItem(FoodItem theFoodItem);
+
+	public FoodItem getFoodItem(int theId);
 	
 }

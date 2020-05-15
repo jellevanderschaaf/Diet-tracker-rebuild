@@ -50,9 +50,9 @@
 
                         </table>
 
-                        list per:<br>
-                        100 grams <form:radiobutton path="list" value="grams" /><br>
-                        piece <form:radiobutton path="list" value="piece" />
+                       list per:<br>
+                       100 grams <form:radiobutton path="list" value="grams" /><br>
+                       piece <form:radiobutton path="list" value="piece" />
                     </div>
                     <a href="${pageContext.request.contextPath}/food-item/list">Cancel</a>
                     <input type="submit" value="Create" />

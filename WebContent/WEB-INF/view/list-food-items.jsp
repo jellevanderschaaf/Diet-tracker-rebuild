@@ -32,9 +32,14 @@
 					<th>Kcals</th>
 					<th>Price</th>
 					<th>List</th>
+					<th></th>
 				</tr>
 				
 				<c:forEach var="tempFoodItem" items="${foodItems}">
+				
+					<c:url var="editLink" value="/food-item/showFormForEdit">
+						<c:param name="foodItemId" value="${tempFoodItem.id}" />
+					</c:url>
 				
 					<tr>
 						<td> ${tempFoodItem.name} </td>
@@ -44,6 +49,7 @@
 						<td> ${tempFoodItem.kcals} </td>
 						<td> ${tempFoodItem.price} </td>
 						<td> ${tempFoodItem.list} </td>
+						<td> <a href="${editLink}">Edit</a>
 					</tr>
 				
 				</c:forEach>

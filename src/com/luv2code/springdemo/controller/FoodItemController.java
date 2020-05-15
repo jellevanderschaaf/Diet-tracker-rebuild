@@ -5,9 +5,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.luv2code.springdemo.entity.FoodItem;
 import com.luv2code.springdemo.service.FoodItemService;
@@ -47,5 +48,16 @@ public class FoodItemController {
 		foodItemService.saveFoodItem(theFoodItem);
 		
 		return "redirect:/food-item/list";
+	}
+	
+	@GetMapping("/showFormForEdit")
+	public String showFormForEdit(@RequestParam("foodItemId") int theId, Model theModel) {
+		
+		FoodItem theFoodItem = foodItemService.getFoodItem(theId);
+		
+		theModel.addAttribute("foodItem", theFoodItem);
+		
+		return "food-item-form";
+		
 	}
 }
