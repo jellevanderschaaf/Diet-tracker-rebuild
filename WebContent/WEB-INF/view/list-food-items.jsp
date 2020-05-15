@@ -21,6 +21,8 @@
 	
 		<div id="content">
 		
+		<input type="button" value="New Food Item" onclick="window.location.href='showFormNewFoodItem'; return false;" />
+		
 			<table>
 				<tr>
 					<th>Name</th>

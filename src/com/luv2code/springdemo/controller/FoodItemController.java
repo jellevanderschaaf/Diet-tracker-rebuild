@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.luv2code.springdemo.dao.FoodItemDAO;
+
 import com.luv2code.springdemo.entity.FoodItem;
 import com.luv2code.springdemo.service.FoodItemService;
 
@@ -27,6 +27,13 @@ public class FoodItemController {
 		
 		
 		return "list-food-items";
+	}
+	
+	
+	@RequestMapping("/showFormNewFoodItem")
+	public String showFormNewFoodItem(Model theModel) {
+		
+		return "food-item-form";
 	}
 	
 }
