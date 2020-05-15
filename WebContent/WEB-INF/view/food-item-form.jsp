@@ -16,6 +16,8 @@
 			
 			<form:form action="saveFoodItem" modelAttribute="foodItem" method="POST">
 			
+			<form:hidden path="id" />
+			
 			 <table>
                             <tr>
                                 <td><label>name</label></td>
@@ -53,7 +55,7 @@
                        list per:<br>
                        100 grams <form:radiobutton path="list" value="grams" /><br>
                        piece <form:radiobutton path="list" value="piece" />
-                    </div>
+                    
                     <a href="${pageContext.request.contextPath}/food-item/list">Cancel</a>
                     <input type="submit" value="Create" />
 			

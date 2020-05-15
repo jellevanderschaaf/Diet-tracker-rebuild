@@ -34,7 +34,7 @@ public class FoodItemDAOImpl implements FoodItemDAO {
 		
 		Session currentSession = sessionFactory.getCurrentSession();
 		
-		currentSession.save(theFoodItem);
+		currentSession.saveOrUpdate(theFoodItem);
 	}
 
 	@Override
