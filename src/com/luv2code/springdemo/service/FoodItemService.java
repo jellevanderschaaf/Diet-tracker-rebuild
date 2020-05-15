@@ -7,4 +7,6 @@ import com.luv2code.springdemo.entity.FoodItem;
 public interface FoodItemService {
 
 	public List<FoodItem> getFoodItems();
+
+	public void saveFoodItem(FoodItem theFoodItem);
 }

@@ -29,4 +29,12 @@ public class FoodItemDAOImpl implements FoodItemDAO {
 		
 	}
 
+	@Override
+	public void saveFoodItem(FoodItem theFoodItem) {
+		
+		Session currentSession = sessionFactory.getCurrentSession();
+		
+		currentSession.save(theFoodItem);
+	}
+
 }

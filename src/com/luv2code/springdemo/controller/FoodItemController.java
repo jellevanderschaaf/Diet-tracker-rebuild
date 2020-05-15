@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
@@ -40,4 +41,11 @@ public class FoodItemController {
 		return "food-item-form";
 	}
 	
+	@RequestMapping("/saveFoodItem")
+	public String saveFoodItem(@ModelAttribute("foodItem") FoodItem theFoodItem) {
+		
+		foodItemService.saveFoodItem(theFoodItem);
+		
+		return "redirect:/food-item/list";
+	}
 }
