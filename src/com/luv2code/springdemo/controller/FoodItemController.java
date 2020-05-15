@@ -9,18 +9,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.luv2code.springdemo.dao.FoodItemDAO;
 import com.luv2code.springdemo.entity.FoodItem;
+import com.luv2code.springdemo.service.FoodItemService;
 
 @Controller
 @RequestMapping("/food-item")
 public class FoodItemController {
 	
 	@Autowired
-	private FoodItemDAO foodItemDAO;
-
+	private FoodItemService foodItemService;
+	
 	@RequestMapping("/list")
 	public String listFoodItems(Model theModel) {
 		
-		List<FoodItem> theFoodItems = foodItemDAO.getFoodItems();
+		List<FoodItem> theFoodItems = foodItemService.getFoodItems();
 		
 		theModel.addAttribute("foodItems", theFoodItems);
 		

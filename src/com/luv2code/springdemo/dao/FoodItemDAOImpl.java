@@ -18,7 +18,6 @@ public class FoodItemDAOImpl implements FoodItemDAO {
 	private SessionFactory sessionFactory;
 
 	@Override
-	@Transactional
 	public List<FoodItem> getFoodItems() {
 		
 		Session currentSession = sessionFactory.getCurrentSession();
