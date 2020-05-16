@@ -23,18 +23,26 @@
 			<h2>Food Items</h2>
 		</div>
 		
-			<table class="foodlist-table" style='width:100%'>
+		<hr>
+		
+		<div id="padding">
+		
+			<table class="foodlist-table-head" style='width:100%'>
 				<tr>
-					<th>Name</th>
-					<th>Fat</th>
-					<th>Carbs</th>
-					<th>Protein</th>
-					<th>Kcals</th>
-					<th>Price</th>
-					<th>List</th>
-					<th>Edit</th>
-					<th>Delete</th>
+					<th style='width:20%'>Name</th>
+					<th id="tableFat" style='width:10%'>Fat</th>
+					<th id="tableCarbs" style='width:10%'>Carbs</th>
+					<th id="tableProtein" style='width:10%'>Protein</th>
+					<th style='width:10%'>Kcals</th>
+					<th style='width:10%'>Price</th>
+					<th style='width:10%'>List</th>
+					<th style='width:10%'>Edit</th>
+					<th style='width:10%'>Delete</th>
 				</tr>
+				
+				</table>
+				
+				<table class="foodlist-table" style='width:100%'>
 				
 				<c:forEach var="tempFoodItem" items="${foodItems}">
 				
@@ -64,6 +72,8 @@
 		
 		<input type="button" value="New Food Item" class="buttonNew" onclick="window.location.href='showFormNewFoodItem'; return false;" />
 		
+			</div>
+
 		</div>
 
 	</div>
