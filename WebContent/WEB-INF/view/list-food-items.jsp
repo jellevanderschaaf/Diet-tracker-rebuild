@@ -7,24 +7,20 @@
 <head>
 <title>List Food Items</title>
 
-<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css" />
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css" />
 
 </head>
 
 <body>
 
-
-	<div id="wrapper">
-		<div id="header">
-			<h2>Food Items</h2>
-		</div>
-	</div>
-
 	<div id="container">
 	
 		<div id="content">
 		
-		<input type="button" value="New Food Item" onclick="window.location.href='showFormNewFoodItem'; return false;" />
+				<div id="header">
+			<h2>Food Items</h2>
+		</div>
 		
 			<table>
 				<tr>
@@ -64,6 +60,8 @@
 				</c:forEach>
 				
 			</table>
+		
+		<input type="button" value="New Food Item" class="buttonNew" onclick="window.location.href='showFormNewFoodItem'; return false;" />
 		
 		</div>
 
