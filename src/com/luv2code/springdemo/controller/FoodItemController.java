@@ -61,4 +61,12 @@ public class FoodItemController {
 		return "food-item-form";
 		
 	}
+	
+	@GetMapping("/delete")
+	public String deleteFoodItem(@RequestParam("foodItemId") int theId) {
+		
+		foodItemService.deleteFoodItem(theId);
+		
+		return "redirect:/food-item/list";
+	}
 }

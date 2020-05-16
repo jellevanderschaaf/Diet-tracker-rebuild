@@ -47,4 +47,16 @@ public class FoodItemDAOImpl implements FoodItemDAO {
 		return theFoodItem;
 	}
 
+	@Override
+	public void deleteFoodItem(int theId) {
+		
+		Session currentSession = sessionFactory.getCurrentSession();
+	
+		Query theQuery = currentSession.createQuery("delete from FoodItem where id=:foodItemId");
+		
+		theQuery.setParameter("foodItemId", theId);
+		
+		theQuery.executeUpdate();
+	}
+
 }

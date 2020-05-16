@@ -38,4 +38,12 @@ public class FoodItemServiceImpl implements FoodItemService {
 		return foodItemDAO.getFoodItem(theId);
 	}
 
+
+	@Override
+	@Transactional
+	public void deleteFoodItem(int theId) {
+		
+		foodItemDAO.deleteFoodItem(theId);
+	}
+	
 }

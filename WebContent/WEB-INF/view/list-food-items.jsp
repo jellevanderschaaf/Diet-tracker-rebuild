@@ -33,11 +33,16 @@
 					<th>Price</th>
 					<th>List</th>
 					<th></th>
+					<th></th>
 				</tr>
 				
 				<c:forEach var="tempFoodItem" items="${foodItems}">
 				
 					<c:url var="editLink" value="/food-item/showFormForEdit">
+						<c:param name="foodItemId" value="${tempFoodItem.id}" />
+					</c:url>
+					
+					<c:url var="deleteLink" value="/food-item/delete">
 						<c:param name="foodItemId" value="${tempFoodItem.id}" />
 					</c:url>
 				
@@ -50,6 +55,7 @@
 						<td> ${tempFoodItem.price} </td>
 						<td> ${tempFoodItem.list} </td>
 						<td> <a href="${editLink}">Edit</a>
+						<td> <a href="${deleteLink}" onclick="if(!(confirm('Are you sure you want to delete this food item?'))) return false">Delete</a>
 					</tr>
 				
 				</c:forEach>

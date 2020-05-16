@@ -11,4 +11,6 @@ public interface FoodItemService {
 	public void saveFoodItem(FoodItem theFoodItem);
 
 	public FoodItem getFoodItem(int theId);
+
+	public void deleteFoodItem(int theId);
 }
