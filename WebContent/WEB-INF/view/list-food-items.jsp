@@ -9,6 +9,7 @@
 
   	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 
@@ -22,7 +23,7 @@
 			<h2>Food Items</h2>
 		</div>
 		
-			<table>
+			<table class="foodlist-table" style='width:100%'>
 				<tr>
 					<th>Name</th>
 					<th>Fat</th>
@@ -31,8 +32,8 @@
 					<th>Kcals</th>
 					<th>Price</th>
 					<th>List</th>
-					<th></th>
-					<th></th>
+					<th>Edit</th>
+					<th>Delete</th>
 				</tr>
 				
 				<c:forEach var="tempFoodItem" items="${foodItems}">
@@ -45,16 +46,16 @@
 						<c:param name="foodItemId" value="${tempFoodItem.id}" />
 					</c:url>
 				
-					<tr>
-						<td> ${tempFoodItem.name} </td>
-						<td> ${tempFoodItem.fat} </td>
-						<td> ${tempFoodItem.carbs} </td>
-						<td> ${tempFoodItem.protein} </td>
-						<td> ${tempFoodItem.kcals} </td>
-						<td> ${tempFoodItem.price} </td>
-						<td> ${tempFoodItem.list} </td>
-						<td> <a href="${editLink}">Edit</a>
-						<td> <a href="${deleteLink}" onclick="if(!(confirm('Are you sure you want to delete this food item?'))) return false">Delete</a>
+					<tr class="food-list-tr">
+						<td style='width:20%' class="td-left"> ${tempFoodItem.name} </td>
+						<td style='width:10%' class="td-center"> ${tempFoodItem.fat} </td>
+						<td style='width:10%' class="td-center"> ${tempFoodItem.carbs} </td>
+						<td style='width:10%' class="td-center"> ${tempFoodItem.protein} </td>
+						<td style='width:10%' class="td-center"> ${tempFoodItem.kcals} </td>
+						<td style='width:10%' class="td-center"> ${tempFoodItem.price} </td>
+						<td style='width:10%' class="td-center"> ${tempFoodItem.list} </td>
+						<td style='width:10%' class="td-center"> <a href="${editLink}"><i class='material-icons'>edit</i></a>
+						<td style='width:10%'class="td-right"> <a href="${deleteLink}" onclick="if(!(confirm('Are you sure you want to delete this food item?'))) return false"><i class='material-icons'>delete_outline</i></a>			
 					</tr>
 				
 				</c:forEach>
