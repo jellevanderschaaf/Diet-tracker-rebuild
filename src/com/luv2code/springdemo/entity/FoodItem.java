@@ -20,19 +20,19 @@ public class FoodItem {
 	private String name;
 	
 	@Column(name="fat")
-	private int fat;
+	private double fat;
 	
 	@Column(name="carbs")
-	private int carbs;
+	private double carbs;
 	
 	@Column(name="protein")
-	private int protein;
+	private double protein;
 	
 	@Column(name="kcals")
-	private int kcals;
+	private double kcals;
 	
 	@Column(name="price")
-	private int price;
+	private double price;
 	
 	@Column(name="list")
 	private String list;
@@ -57,43 +57,43 @@ public class FoodItem {
 		this.name = name;
 	}
 
-	public int getFat() {
+	public double getFat() {
 		return fat;
 	}
 
-	public void setFat(int fat) {
+	public void setFat(double fat) {
 		this.fat = fat;
 	}
 
-	public int getCarbs() {
+	public double getCarbs() {
 		return carbs;
 	}
 
-	public void setCarbs(int carbs) {
+	public void setCarbs(double carbs) {
 		this.carbs = carbs;
 	}
 
-	public int getProtein() {
+	public double getProtein() {
 		return protein;
 	}
 
-	public void setProtein(int protein) {
+	public void setProtein(double protein) {
 		this.protein = protein;
 	}
 
-	public int getKcals() {
+	public double getKcals() {
 		return kcals;
 	}
 
-	public void setKcals(int kcals) {
+	public void setKcals(double kcals) {
 		this.kcals = kcals;
 	}
 
-	public int getPrice() {
+	public double getPrice() {
 		return price;
 	}
 
-	public void setPrice(int price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
 
