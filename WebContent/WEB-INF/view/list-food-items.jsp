@@ -7,6 +7,8 @@
 <head>
 <title>List Food Items</title>
 
+	
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css" />
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -29,7 +31,7 @@
 		
 			<table class="foodlist-table-head" style='width:100%'>
 				<tr>
-					<th style='width:20%'>Name</th>
+					<th style='width:20%'>Food Item</th>
 					<th id="tableFat" style='width:10%'>Fat</th>
 					<th id="tableCarbs" style='width:10%'>Carbs</th>
 					<th id="tableProtein" style='width:10%'>Protein</th>
@@ -63,7 +65,7 @@
 						<td style='width:10%' class="td-center"> ${tempFoodItem.price} </td>
 						<td style='width:10%' class="td-center"> ${tempFoodItem.list} </td>
 						<td style='width:10%' class="td-center"> <a href="${editLink}"><i class='material-icons'>edit</i></a>
-						<td style='width:10%'class="td-right"> <a href="${deleteLink}" onclick="if(!(confirm('Are you sure you want to delete this food item?'))) return false"><i class='material-icons'>delete_outline</i></a>			
+						<td style='width:10%' class="td-right"> <a rel="${tempFoodItem.id}" href="${deleteLink}" onclick="if(!(confirm('Are you sure you want to delete this food item?'))) return false"><i class='material-icons'>delete_outline</i></a>			
 					</tr>
 				
 				</c:forEach>

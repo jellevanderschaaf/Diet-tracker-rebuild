@@ -27,6 +27,8 @@ h2 {
 }
 
 #content {
+	position: relative;
+	height: 345px;
     width: 700px;
     background-color: white;
     text-align: center;
@@ -61,18 +63,19 @@ th {
 	color: white;
     background-color: #5C6165;
     border-color: #5C6165;
-    margin: 15px;
+    margin: 15px 0px 15px -75px;
     line-height: 19px;
     border-radius: 5px;
     border-style: none;
     border-color: #545559;
     padding: 6px 12px 6px 12px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
 }
 
-button:focus {
-    outline: 0;
-}
-
+*:focus {
+	outline: none !important}
 
 hr {
 	margin: 0;
@@ -123,7 +126,7 @@ hr {
 }
 
 .td-left {
-    padding-left: 15px;
+    padding-left: 25px;
     padding-bottom: 3px;
     background-color: #fafafa;
     border-top-left-radius: 5px;
